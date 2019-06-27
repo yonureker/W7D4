@@ -1,19 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { receiveAllPokemon, requestAllPokemon } from './actions/pokemon_actions';
-import configureStore from './store/store'; 
+import { Provider } from 'react-redux';
+import configureStore from './store/store';
+import PokemonIndexContainer from './components/pokemon/pokemon_index_container';
+import { HashRouter, Route } from 'react-router-dom';
+import * as APIUtils from './util/api_util';
 
-const store = configureStore();
+window.fetchAPokemon = APIUtils.fetchAPokemon;
+window.fetchAllPokemon = APIUtils.fetchAllPokemon;
 
-window.receiveAllPokemon = receiveAllPokemon;
-window.requestAllPokemon = requestAllPokemon;
 
-window.getState = store.getState;
-window.dispatch = store.dispatch;
- 
+const Root = ({ store }) => {
+
+  return (
+    <Provider store={store}>
+      <HashRouter>
+        <Route path='/' component={PokemonIndexContainer} />
+      </HashRouter>
+    </Provider>
+  )
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-  // const store = configureStore();
+  const store = configureStore();
+  const root = document.getElementById('root');
 
-  const rootEl = document.getElementById('root');
-  ReactDOM.render(<h1>Pokedex</h1>, rootEl);
+  ReactDOM.render(<Root store={store} />, root);
 });
