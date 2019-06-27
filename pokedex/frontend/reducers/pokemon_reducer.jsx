@@ -1,4 +1,5 @@
 import { RECEIVE_ALL_POKEMON } from '../actions/pokemon_actions';
+import merge from 'lodash/merge';
 
 //??? why cant use default with 'const'
 export const pokemonReducer = (state = {}, action) => {
@@ -6,7 +7,8 @@ export const pokemonReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_ALL_POKEMON:
-      return { action.pokemon };
+      const nextState = merge({}, action.pokemon );
+      return nextState;
     default:
       return state;
   }
