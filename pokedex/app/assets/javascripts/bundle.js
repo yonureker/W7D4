@@ -166,29 +166,9 @@ var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers
   !*** ./frontend/reducers/pokemon_reducer.jsx ***!
   \***********************************************/
 /*! exports provided: pokemonReducer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pokemonReducer", function() { return pokemonReducer; });
-/* harmony import */ var _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/pokemon_actions */ "./frontend/actions/pokemon_actions.js");
- //??? why cant use default with 'const'
-
-var pokemonReducer = function pokemonReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  Object.freeze(state);
-
-  switch (action.type) {
-    case _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_POKEMON"]:
-      return {
-        pokemon: action.pokemon
-      };
-
-    default:
-      return state;
-  }
-};
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/appacademy/Desktop/W7D3/pokedex/frontend/reducers/pokemon_reducer.jsx: Unexpected token, expected \",\" (9:21)\n\n\u001b[0m \u001b[90m  7 | \u001b[39m  \u001b[36mswitch\u001b[39m (action\u001b[33m.\u001b[39mtype) {\u001b[0m\n\u001b[0m \u001b[90m  8 | \u001b[39m    \u001b[36mcase\u001b[39m \u001b[33mRECEIVE_ALL_POKEMON\u001b[39m\u001b[33m:\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m      \u001b[36mreturn\u001b[39m { action\u001b[33m.\u001b[39mpokemon }\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m    \u001b[36mdefault\u001b[39m\u001b[33m:\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m      \u001b[36mreturn\u001b[39m state\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m  }\u001b[0m\n    at Object.raise (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:6344:17)\n    at Object.unexpected (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:7659:16)\n    at Object.expect (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:7645:28)\n    at Object.parseObj (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:9134:14)\n    at Object.parseExprAtom (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8774:21)\n    at Object.parseExprAtom (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:3599:20)\n    at Object.parseExprSubscripts (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8413:23)\n    at Object.parseMaybeUnary (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8393:21)\n    at Object.parseExprOps (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8280:23)\n    at Object.parseMaybeConditional (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8253:23)\n    at Object.parseMaybeAssign (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8200:21)\n    at Object.parseExpression (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8148:23)\n    at Object.parseReturnStatement (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:10157:28)\n    at Object.parseStatementContent (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:9836:21)\n    at Object.parseStatement (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseSwitchStatement (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:10195:36)\n    at Object.parseStatementContent (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:9839:21)\n    at Object.parseStatement (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseBlock (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:10335:10)\n    at Object.parseFunctionBody (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:9408:24)\n    at Object.parseArrowExpression (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:9349:10)\n    at Object.parseParenAndDistinguishExpression (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8986:12)\n    at Object.parseExprAtom (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8760:21)\n    at Object.parseExprAtom (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:3599:20)\n    at Object.parseExprSubscripts (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8413:23)\n    at Object.parseMaybeUnary (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8393:21)\n    at Object.parseExprOps (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8280:23)\n    at Object.parseMaybeConditional (/Users/appacademy/Desktop/W7D3/pokedex/node_modules/@babel/parser/lib/index.js:8253:23)");
 
 /***/ }),
 
