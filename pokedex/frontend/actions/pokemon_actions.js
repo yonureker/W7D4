@@ -25,8 +25,9 @@ export const receiveAPokemon = poke => {
   };
 };
 
-export const requestAPokemon = (id) => (dispatch) => (
-  APIUtil.fetchAPokemon(id)
-    .then(poke => dispatch(receiveAPokemon(poke)))
-);
-
+export const requestAPokemon = (id) => (dispatch) => {
+  APIUtil.fetchAPokemon(id).then(poke => {
+    dispatch(receiveAPokemon(poke));
+    return poke;
+  });
+};

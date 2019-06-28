@@ -128,8 +128,9 @@ var receiveAPokemon = function receiveAPokemon(poke) {
 };
 var requestAPokemon = function requestAPokemon(id) {
   return function (dispatch) {
-    return _util_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchAPokemon"](id).then(function (poke) {
-      return dispatch(receiveAPokemon(poke));
+    _util_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchAPokemon"](id).then(function (poke) {
+      dispatch(receiveAPokemon(poke));
+      return poke;
     });
   };
 };
