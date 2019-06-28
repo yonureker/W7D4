@@ -1,4 +1,3 @@
-// ??? class PokemonIndex extends React.Component
 import React from 'react';
 
 class PokemonDetail extends React.Component {
@@ -8,18 +7,16 @@ class PokemonDetail extends React.Component {
   }
 
   render() {
-    // props will have pokemon and items
-    const pokemon = this.props.pokemon;
-    const pokemonItems = pokemon.map(poke => <PokemonIndexItem key={poke.id} pokemon={poke} />);
-
+    debugger
+    const { pokemon, items, loading } = this.props;
+    
     return (
       <section className="pokedex">
         <ul>
-          {pokemonItems}
         </ul>
       </section>
     );
   }
 }
 
-export default PokemonIndex;
+export default PokemonDetail;
